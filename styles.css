@@ -1233,7 +1233,7 @@ textarea {
     justify-content: center;
     flex: 0 0 auto;
     min-height: 36px;
-    min-width: 58px;
+    min-width: 86px;
     padding: 0 11px;
     border: 1px solid var(--green);
     border-radius: 7px;
@@ -1245,7 +1245,7 @@ textarea {
   }
 
   .nav-cta::after {
-    content: "Try";
+    content: "Free trial";
     font-size: 13px;
     font-weight: 800;
     color: var(--green-dark);
@@ -1276,13 +1276,52 @@ textarea {
 
   .hero h1 {
     max-width: 100%;
-    font-size: clamp(38px, 11vw, 42px);
+    font-size: clamp(36px, 10.4vw, 40px);
     line-height: 1.05;
     overflow-wrap: normal;
   }
 
+  .hero {
+    gap: 18px;
+    padding-top: 26px;
+    padding-bottom: 18px;
+  }
+
+  .hero-kicker {
+    margin-bottom: 10px;
+    font-size: 13px;
+    line-height: 1.25;
+  }
+
+  .hero h1 {
+    margin-bottom: 12px;
+  }
+
   .lead {
-    font-size: 17px;
+    font-size: 16px;
+    line-height: 1.42;
+  }
+
+  .product-line {
+    margin-top: 10px;
+    padding: 12px 13px;
+    font-size: 15px;
+    line-height: 1.38;
+  }
+
+  .cta-row {
+    gap: 10px;
+    margin-top: 18px;
+  }
+
+  .button {
+    min-height: 46px;
+    padding: 0 18px;
+  }
+
+  .cta-row .button.primary,
+  .cta-row .button.secondary {
+    min-width: 0;
   }
 
   .cta-row,
@@ -1299,7 +1338,58 @@ textarea {
     overflow: hidden;
   }
 
-  .hero-facts,
+  .hero-facts {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6px;
+    margin-top: 12px;
+  }
+
+  .hero-facts div {
+    min-height: 58px;
+    padding: 10px 7px;
+    text-align: center;
+    box-shadow: none;
+  }
+
+  .hero-facts div::before {
+    display: none;
+  }
+
+  .hero-facts strong {
+    font-size: 12px;
+  }
+
+  .hero-facts span {
+    margin-top: 3px;
+    font-size: 11px;
+    line-height: 1.2;
+  }
+
+  .trust-row {
+    position: relative;
+    gap: 8px;
+    margin-top: 12px;
+    padding-left: 20px;
+    font-size: 13px;
+    line-height: 1.35;
+  }
+
+  .trust-row::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 5px;
+    width: 10px;
+    height: 6px;
+    border-left: 2px solid var(--green);
+    border-bottom: 2px solid var(--green);
+    transform: rotate(-45deg);
+  }
+
+  .hero-media img {
+    max-height: 210px;
+  }
+
   .join-flow ol,
   .answer-grid,
   .trust-list {
