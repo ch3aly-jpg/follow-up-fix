@@ -1,8 +1,7 @@
 const onboardingForm = document.querySelector("#clientOnboardingForm");
+const contactEmail = "ch3aly@gmail.com";
 
-onboardingForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const data = new FormData(onboardingForm);
+function buildOnboardingMailto(data) {
   const subject = encodeURIComponent("Follow-Up Fix Proof Trial details");
   const body = encodeURIComponent(
     [
@@ -30,5 +29,15 @@ onboardingForm.addEventListener("submit", (event) => {
       "Thanks"
     ].join("\n")
   );
-  window.location.href = `mailto:ch3aly@gmail.com?subject=${subject}&body=${body}`;
+  return `mailto:${contactEmail}?subject=${subject}&body=${body}`;
+}
+
+window.FollowUpFix = {
+  ...(window.FollowUpFix || {}),
+  buildOnboardingMailto
+};
+
+onboardingForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  window.location.href = buildOnboardingMailto(new FormData(onboardingForm));
 });

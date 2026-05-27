@@ -21,6 +21,7 @@ const copyStatus = document.querySelector("#copyStatus");
 const toggleRows = document.querySelector("#toggleRows");
 const demoRows = document.querySelector("#demoRows");
 const leadForm = document.querySelector("#leadForm");
+const contactEmail = "ch3aly@gmail.com";
 
 function setMessage() {
   messageOutput.value = templates[messageSelect.value];
@@ -50,9 +51,7 @@ toggleRows.addEventListener("click", () => {
   });
 });
 
-leadForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const data = new FormData(leadForm);
+function buildLeadMailto(data) {
   const subject = encodeURIComponent("Follow-Up Fix 7-day Proof Trial");
   const body = encodeURIComponent(
     [
@@ -73,5 +72,15 @@ leadForm.addEventListener("submit", (event) => {
       "Thanks"
     ].join("\n")
   );
-  window.location.href = `mailto:ch3aly@gmail.com?subject=${subject}&body=${body}`;
+  return `mailto:${contactEmail}?subject=${subject}&body=${body}`;
+}
+
+window.FollowUpFix = {
+  ...(window.FollowUpFix || {}),
+  buildLeadMailto
+};
+
+leadForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  window.location.href = buildLeadMailto(new FormData(leadForm));
 });
