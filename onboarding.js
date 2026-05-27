@@ -25,6 +25,8 @@ onboardingForm.addEventListener("submit", (event) => {
       "Words or tone to avoid:",
       data.get("tone"),
       "",
+      "I saw the 5-minute UK daytime reply note on the website.",
+      "",
       "Thanks"
     ].join("\n")
   );
