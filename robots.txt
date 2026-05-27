@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ch3aly-jpg.github.io/follow-up-fix/sitemap.xml
+Sitemap: https://followupfix.vercel.app/sitemap.xml

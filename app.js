@@ -1,3 +1,10 @@
+const cleanSiteOrigin = "https://followupfix.vercel.app";
+
+if (window.location.hostname === "ch3aly-jpg.github.io") {
+  const cleanPath = window.location.pathname.replace(/^\/follow-up-fix\/?/, "/");
+  window.location.replace(`${cleanSiteOrigin}${cleanPath}${window.location.search}${window.location.hash}`);
+}
+
 const templates = {
   quote:
     "Hi {first_name}, just checking in on the quote I sent over for {job}. Happy to answer any questions. Shall we pencil you in?",

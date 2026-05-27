@@ -4,4 +4,4 @@ Public static website for Follow-Up Fix, a quote follow-up service for UK home-s
 
 Live site target:
 
-https://ch3aly-jpg.github.io/follow-up-fix/
+https://followupfix.vercel.app/
