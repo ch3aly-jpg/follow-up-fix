@@ -380,6 +380,101 @@ main {
   padding: 72px 0;
 }
 
+.narrated-demo {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.72fr) minmax(520px, 1.28fr);
+  gap: 52px;
+  align-items: center;
+  width: 100%;
+  margin: 28px 0 0;
+  padding: 72px max(48px, calc((100vw - var(--page-max)) / 2));
+  background:
+    linear-gradient(135deg, rgba(7, 139, 54, 0.96), rgba(15, 24, 32, 0.98)),
+    #111820;
+  color: #fff;
+}
+
+.narrated-copy {
+  max-width: 520px;
+}
+
+.narrated-copy h2 {
+  margin: 0 0 16px;
+  font-size: clamp(34px, 4.2vw, 58px);
+  line-height: 1.04;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
+.narrated-copy p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 20px;
+  line-height: 1.45;
+}
+
+.narrated-copy ul {
+  display: grid;
+  gap: 12px;
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.narrated-copy li {
+  position: relative;
+  padding-left: 30px;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.narrated-copy li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 7px;
+  width: 13px;
+  height: 8px;
+  border-left: 2px solid #aef0bd;
+  border-bottom: 2px solid #aef0bd;
+  transform: rotate(-45deg);
+}
+
+.narrated-video-shell {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 34px 90px rgba(0, 0, 0, 0.26);
+}
+
+.narrated-video-shell video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #fff;
+}
+
+.narrated-video-shell figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 15px 18px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.narrated-video-shell figcaption strong {
+  flex: 0 0 auto;
+  color: var(--green-dark);
+  font-size: 15px;
+}
+
 .quick-answers {
   padding-top: 44px;
   padding-bottom: 46px;
@@ -1081,6 +1176,7 @@ textarea {
   .hero,
   .join-flow,
   .demo,
+  .narrated-demo,
   .trust-panel,
   .start,
   .pricing {
@@ -1177,6 +1273,7 @@ textarea {
   .fit,
   .steps,
   .included,
+  .narrated-demo,
   .quick-answers,
   .trust-panel,
   .demo,
@@ -1272,6 +1369,47 @@ textarea {
     max-width: 362px;
     margin-left: 14px;
     margin-right: auto;
+  }
+
+  .narrated-demo {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 18px;
+    padding: 40px 14px 44px;
+  }
+
+  .narrated-copy {
+    max-width: 362px;
+    margin: 0 auto;
+  }
+
+  .narrated-copy h2 {
+    font-size: clamp(30px, 9vw, 36px);
+  }
+
+  .narrated-copy p {
+    font-size: 16px;
+  }
+
+  .narrated-copy ul {
+    gap: 8px;
+    margin-top: 18px;
+  }
+
+  .narrated-copy li {
+    font-size: 15px;
+  }
+
+  .narrated-video-shell {
+    width: min(362px, 100%);
+    margin: 0 auto;
+    border-radius: var(--radius);
+  }
+
+  .narrated-video-shell figcaption {
+    display: grid;
+    gap: 4px;
+    padding: 12px 13px;
   }
 
   .hero h1 {
