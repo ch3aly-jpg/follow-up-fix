@@ -25,6 +25,10 @@ html {
   scroll-behavior: smooth;
 }
 
+[id] {
+  scroll-margin-top: 96px;
+}
+
 body {
   margin: 0;
   background: var(--bg);
@@ -1027,6 +1031,13 @@ textarea {
     font-size: 13px;
     font-weight: 800;
     color: var(--green-dark);
+  }
+
+  .nav-cta:hover {
+    transform: none;
+    background: #fff;
+    color: var(--green-dark);
+    box-shadow: none;
   }
 
   .section-grid,
