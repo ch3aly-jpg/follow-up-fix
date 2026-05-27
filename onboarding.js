@@ -30,5 +30,5 @@ onboardingForm.addEventListener("submit", (event) => {
       "Thanks"
     ].join("\n")
   );
-  window.location.href = `mailto:ch3aly@googlemail.com?subject=${subject}&body=${body}`;
+  window.location.href = `mailto:ch3aly@gmail.com?subject=${subject}&body=${body}`;
 });
