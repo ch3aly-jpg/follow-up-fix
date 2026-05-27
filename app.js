@@ -68,7 +68,7 @@ leadForm.addEventListener("submit", (event) => {
       "Current quote follow-up process:",
       "",
       "I can send 3-5 open quotes in rough format to get started.",
-      "I saw the 5-minute UK daytime reply note on the website.",
+      "I saw the instant setup note on the website.",
       "",
       "Thanks"
     ].join("\n")
