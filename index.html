@@ -29,6 +29,7 @@
         <span>Follow-Up Fix</span>
       </a>
       <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#answers">Answers</a>
         <a href="#how">How it works</a>
         <a href="#included">What you get</a>
         <a href="#pricing">Pricing</a>
@@ -49,6 +50,10 @@
           <p class="lead">
             A simple weekly system for chasing open quotes, missed enquiries,
             and review requests without learning a CRM.
+          </p>
+          <p class="product-line">
+            You get a private chase list, copy-ready messages, and a weekly prompt.
+            You send every message yourself.
           </p>
           <div class="cta-row">
             <a class="button primary" href="#start">Try it free for 7 days</a>
@@ -75,6 +80,31 @@
         </div>
         <div class="hero-media" aria-label="Follow-Up Fix tracker preview">
           <img src="assets/product-mockup.png" alt="Laptop and phone showing a Follow-Up Fix weekly tracker">
+        </div>
+      </section>
+
+      <section id="answers" class="quick-answers" aria-labelledby="answers-title">
+        <div class="quick-answer-head">
+          <h2 id="answers-title">Immediate answers</h2>
+          <p>No mystery call. No software setup. You can see what the product is before you ask.</p>
+        </div>
+        <div class="answer-grid">
+          <article>
+            <h3>What do I get?</h3>
+            <p>A private chase list, ready-to-send follow-up messages, and a weekly prompt showing who needs a nudge.</p>
+          </article>
+          <article>
+            <h3>What do I send?</h3>
+            <p>Three to five rough open quotes: customer, job, value, quote date, and what happened last.</p>
+          </article>
+          <article>
+            <h3>Who messages customers?</h3>
+            <p>You do. We write the suggested text; you copy it into WhatsApp, SMS, or email from your own account.</p>
+          </article>
+          <article>
+            <h3>How fast do we reply?</h3>
+            <p>Usually within 5 minutes during UK daytime. Overnight enquiries get a reply the next morning.</p>
+          </article>
         </div>
       </section>
 
@@ -221,74 +251,111 @@
             "Due today" view, copy the message, send it, and mark the result.
           </p>
         </div>
-        <div class="tracker-shell" role="region" aria-label="Demo quote tracker">
-          <div class="tracker-top">
-            <div>
-              <strong>This week at a glance</strong>
-              <span>19-25 May</span>
+        <div class="demo-stack">
+          <figure class="video-shell">
+            <video controls muted playsinline preload="metadata" poster="assets/example-walkthrough-poster.png">
+              <source src="assets/example-walkthrough.webm" type="video/webm">
+              Your browser cannot play this short walkthrough. The demo tracker below shows the same flow.
+            </video>
+            <figcaption>
+              <strong>12-second example</strong>
+              <span>Rough quote notes become a chase list, a copy-ready message, and a simple result.</span>
+            </figcaption>
+          </figure>
+          <div class="tracker-shell" role="region" aria-label="Demo quote tracker">
+            <div class="tracker-top">
+              <div>
+                <strong>This week at a glance</strong>
+                <span>19-25 May</span>
+              </div>
+              <button class="mini-button" id="toggleRows" type="button">Show overdue only</button>
             </div>
-            <button class="mini-button" id="toggleRows" type="button">Show overdue only</button>
-          </div>
-          <div class="metric-grid">
-            <div><span>Due today</span><strong>6</strong></div>
-            <div><span>Overdue</span><strong class="amber">4</strong></div>
-            <div><span>Reviews due</span><strong>3</strong></div>
-          </div>
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr>
-                  <th>Contact</th>
-                  <th>Job</th>
-                  <th>Due</th>
-                  <th>Channel</th>
-                  <th>Next step</th>
-                </tr>
-              </thead>
-              <tbody id="demoRows">
-                <tr data-status="today">
-                  <td>James Walker</td>
-                  <td>Exterior paint</td>
-                  <td><span class="status today">Today</span></td>
-                  <td>WhatsApp</td>
-                  <td>Friendly reminder</td>
-                </tr>
-                <tr data-status="today">
-                  <td>Sarah Taylor</td>
-                  <td>Kitchen redo</td>
-                  <td><span class="status today">Today</span></td>
-                  <td>SMS</td>
-                  <td>Ask if they need any info</td>
-                </tr>
-                <tr data-status="overdue">
-                  <td>Mark Robinson</td>
-                  <td>Garden tidy</td>
-                  <td><span class="status overdue">Overdue</span></td>
-                  <td>Email</td>
-                  <td>Final nudge</td>
-                </tr>
-                <tr data-status="review">
-                  <td>Emily Green</td>
-                  <td>End of tenancy clean</td>
-                  <td><span class="status review">Tomorrow</span></td>
-                  <td>WhatsApp</td>
-                  <td>Review request</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="message-box">
-            <label for="messageSelect">Message template</label>
-            <select id="messageSelect">
-              <option value="quote">Quote follow-up - friendly</option>
-              <option value="enquiry">Missed enquiry reply</option>
-              <option value="review">Review request</option>
-            </select>
-            <textarea id="messageOutput" readonly></textarea>
-            <button class="button primary small" id="copyMessage" type="button">Copy message</button>
-            <span id="copyStatus" role="status" aria-live="polite"></span>
+            <div class="metric-grid">
+              <div><span>Due today</span><strong>6</strong></div>
+              <div><span>Overdue</span><strong class="amber">4</strong></div>
+              <div><span>Reviews due</span><strong>3</strong></div>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Contact</th>
+                    <th>Job</th>
+                    <th>Due</th>
+                    <th>Channel</th>
+                    <th>Next step</th>
+                  </tr>
+                </thead>
+                <tbody id="demoRows">
+                  <tr data-status="today">
+                    <td>James Walker</td>
+                    <td>Exterior paint</td>
+                    <td><span class="status today">Today</span></td>
+                    <td>WhatsApp</td>
+                    <td>Friendly reminder</td>
+                  </tr>
+                  <tr data-status="today">
+                    <td>Sarah Taylor</td>
+                    <td>Kitchen redo</td>
+                    <td><span class="status today">Today</span></td>
+                    <td>SMS</td>
+                    <td>Ask if they need any info</td>
+                  </tr>
+                  <tr data-status="overdue">
+                    <td>Mark Robinson</td>
+                    <td>Garden tidy</td>
+                    <td><span class="status overdue">Overdue</span></td>
+                    <td>Email</td>
+                    <td>Final nudge</td>
+                  </tr>
+                  <tr data-status="review">
+                    <td>Emily Green</td>
+                    <td>End of tenancy clean</td>
+                    <td><span class="status review">Tomorrow</span></td>
+                    <td>WhatsApp</td>
+                    <td>Review request</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="message-box">
+              <label for="messageSelect">Message template</label>
+              <select id="messageSelect">
+                <option value="quote">Quote follow-up - friendly</option>
+                <option value="enquiry">Missed enquiry reply</option>
+                <option value="review">Review request</option>
+              </select>
+              <textarea id="messageOutput" readonly></textarea>
+              <button class="button primary small" id="copyMessage" type="button">Copy message</button>
+              <span id="copyStatus" role="status" aria-live="polite"></span>
+            </div>
           </div>
         </div>
+      </section>
+
+      <section id="trust" class="trust-panel" aria-labelledby="trust-title">
+        <div>
+          <h2 id="trust-title">Trust is built into the trial.</h2>
+          <p>The first week is designed to be useful without giving away account access, payment details, or control of customer messages.</p>
+        </div>
+        <ul class="trust-list">
+          <li>
+            <strong>No card upfront</strong>
+            <span>Try it for 7 days before any payment link is sent.</span>
+          </li>
+          <li>
+            <strong>No inbox or WhatsApp access</strong>
+            <span>You send every customer message yourself.</span>
+          </li>
+          <li>
+            <strong>No made-up proof</strong>
+            <span>We only use real quote notes and real outcomes from your trial.</span>
+          </li>
+          <li>
+            <strong>Plain terms</strong>
+            <span><a href="privacy.html">Privacy</a> and <a href="terms.html">terms</a> are public before you start.</span>
+          </li>
+        </ul>
       </section>
 
       <section id="pricing" class="pricing" aria-labelledby="pricing-title">
