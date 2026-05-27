@@ -100,15 +100,33 @@ textarea {
   font-weight: 650;
 }
 
-.desktop-nav a:hover,
-.nav-cta:hover {
+.desktop-nav a:hover {
   color: var(--green);
 }
 
 .nav-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 16px;
+  border: 1px solid var(--green);
+  border-radius: 7px;
+  background: var(--green);
   font-size: 15px;
   font-weight: 750;
-  color: var(--green-dark);
+  color: #fff;
+  line-height: 1;
+  white-space: nowrap;
+  box-shadow: 0 10px 22px rgba(7, 139, 54, 0.16);
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.nav-cta:hover {
+  transform: translateY(-1px);
+  background: var(--green-dark);
+  color: #fff;
+  box-shadow: 0 14px 26px rgba(7, 139, 54, 0.2);
 }
 
 a:focus-visible,
@@ -146,12 +164,21 @@ main {
   padding: 34px 0 18px;
 }
 
+.hero-kicker {
+  margin: 0 0 14px;
+  color: var(--green-dark);
+  font-size: 15px;
+  font-weight: 850;
+  line-height: 1.2;
+}
+
 .hero h1 {
   max-width: 600px;
   margin: 0 0 18px;
   font-size: clamp(44px, 4.7vw, 62px);
   line-height: 1.02;
   letter-spacing: 0;
+  text-wrap: balance;
 }
 
 .hero h1 span {
@@ -196,6 +223,14 @@ main {
   background: var(--green);
   color: #fff;
   box-shadow: 0 14px 30px rgba(7, 139, 54, 0.2);
+}
+
+.cta-row .button.primary {
+  min-width: 248px;
+}
+
+.cta-row .button.secondary {
+  min-width: 178px;
 }
 
 .button.primary:hover {
@@ -287,6 +322,7 @@ main {
   font-size: clamp(32px, 4vw, 48px);
   line-height: 1.06;
   letter-spacing: 0;
+  text-wrap: balance;
 }
 
 .section-heading p,
@@ -323,6 +359,7 @@ main {
   margin: 0 0 10px;
   font-size: clamp(28px, 3vw, 40px);
   line-height: 1.08;
+  text-wrap: balance;
 }
 
 .join-flow p {
@@ -961,20 +998,22 @@ textarea {
     justify-content: center;
     flex: 0 0 auto;
     min-height: 36px;
-    min-width: 62px;
+    min-width: 58px;
     padding: 0 11px;
     border: 1px solid var(--green);
     border-radius: 7px;
     background: #fff;
+    box-shadow: none;
     font-size: 0;
     line-height: 1;
     white-space: nowrap;
   }
 
   .nav-cta::after {
-    content: "Start";
+    content: "Try";
     font-size: 13px;
     font-weight: 800;
+    color: var(--green-dark);
   }
 
   .section-grid,
