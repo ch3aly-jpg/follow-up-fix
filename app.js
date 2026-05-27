@@ -51,7 +51,7 @@ leadForm.addEventListener("submit", (event) => {
     [
       "Hi Follow-Up Fix,",
       "",
-      "I want the £19 cheap plan.",
+      "I want the \u00a319 Founding Plan.",
       "",
       `Name: ${data.get("name")}`,
       `Business: ${data.get("business")}`,
