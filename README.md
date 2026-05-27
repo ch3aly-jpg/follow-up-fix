@@ -1,6 +1,6 @@
 # Follow-Up Fix
 
-Public static website for Follow-Up Fix, a £19/month quote follow-up service for UK home-service trades.
+Public static website for Follow-Up Fix, a quote follow-up service for UK home-service trades with a 7-day Proof Trial for the first customers.
 
 Live site target:
 

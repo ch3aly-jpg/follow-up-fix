@@ -3,12 +3,12 @@ const onboardingForm = document.querySelector("#clientOnboardingForm");
 onboardingForm.addEventListener("submit", (event) => {
   event.preventDefault();
   const data = new FormData(onboardingForm);
-  const subject = encodeURIComponent("Follow-Up Fix onboarding details");
+  const subject = encodeURIComponent("Follow-Up Fix Proof Trial details");
   const body = encodeURIComponent(
     [
       "Hi Follow-Up Fix,",
       "",
-      "Here are my onboarding details.",
+      "Here are my Proof Trial onboarding details.",
       "",
       `Business: ${data.get("business")}`,
       `Contact: ${data.get("name")}`,

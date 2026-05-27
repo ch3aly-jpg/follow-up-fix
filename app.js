@@ -46,12 +46,12 @@ toggleRows.addEventListener("click", () => {
 leadForm.addEventListener("submit", (event) => {
   event.preventDefault();
   const data = new FormData(leadForm);
-  const subject = encodeURIComponent("Follow-Up Fix founding plan");
+  const subject = encodeURIComponent("Follow-Up Fix 7-day Proof Trial");
   const body = encodeURIComponent(
     [
       "Hi Follow-Up Fix,",
       "",
-      "I want the \u00a319 Founding Plan.",
+      "I want to try the 7-day Proof Trial.",
       "",
       `Name: ${data.get("name")}`,
       `Business: ${data.get("business")}`,
@@ -59,6 +59,8 @@ leadForm.addEventListener("submit", (event) => {
       `Trade and town: ${data.get("trade")}`,
       "",
       "Current quote follow-up process:",
+      "",
+      "I can send 3-5 open quotes in rough format to get started.",
       "",
       "Thanks"
     ].join("\n")
