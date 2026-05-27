@@ -111,6 +111,15 @@ textarea {
   color: var(--green-dark);
 }
 
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(7, 139, 54, 0.28);
+  outline-offset: 3px;
+}
+
 main {
   overflow: hidden;
 }
@@ -688,10 +697,14 @@ textarea {
 }
 
 .pricing li::before {
-  content: "✓";
-  margin-right: 10px;
-  color: var(--green);
-  font-weight: 900;
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 12px;
+  margin: 0 12px 1px 2px;
+  border: solid var(--green);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
 }
 
 .start {
@@ -930,6 +943,7 @@ textarea {
   .site-header {
     min-height: 66px;
     padding: 0 16px;
+    gap: 10px;
   }
 
   .brand {
@@ -942,7 +956,25 @@ textarea {
   }
 
   .nav-cta {
-    display: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    min-height: 36px;
+    min-width: 62px;
+    padding: 0 11px;
+    border: 1px solid var(--green);
+    border-radius: 7px;
+    background: #fff;
+    font-size: 0;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .nav-cta::after {
+    content: "Start";
+    font-size: 13px;
+    font-weight: 800;
   }
 
   .section-grid,
@@ -953,7 +985,8 @@ textarea {
   .demo,
   .pricing,
   .start {
-    width: min(calc(100% - 28px), 362px);
+    width: calc(100% - 28px);
+    max-width: 362px;
     margin-left: 14px;
     margin-right: auto;
   }
@@ -1041,7 +1074,8 @@ textarea {
   }
 
   .legal-page {
-    width: min(calc(100% - 28px), 362px);
+    width: calc(100% - 28px);
+    max-width: 362px;
     margin-left: 14px;
     margin-right: auto;
     padding: 48px 0;
